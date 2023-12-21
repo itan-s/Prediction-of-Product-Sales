@@ -31,7 +31,25 @@ Observations:
 * Supermarkets are outlets of items with higher prices. Specifically, supermarkets located at Tier 3 locations sold high-priced items (> 10,000 units). See the **Distribution of Outlet Sales by Outlet Location Type**.
 
 
-### 
+### Average outlet sales per outlet type and outlet location type
+
+![bar 1](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/13e64b3b-30b9-4a10-9380-0241a8c8e606)
+
+![bar 2](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/7cc084f1-be6d-48a9-b557-7bbaf900a966)
+
+Observations:
+* Supermarket 3 earned the highest average sales. Grocery stores earned the lowest.
+* Stores in tier 2 and 3 locations have notably higher average sales than those of tier 1 locations.
+
+
+### Number of items sold per item type
+
+![count 1](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/a0b02d11-8e7d-4206-a62e-8e1bb00349df)
+
+Observations:
+* Fruits and vegetables are the abundant items sold in all stores, followed by snack foods and household items.
+* This trend is consistent in all store types: groceries and supermarkets of all types.
+
 
 
 
