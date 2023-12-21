@@ -16,6 +16,24 @@ Observations:
 * Surprisingly, the visibility of the items in stores does not have a significant correlation with the outlet sales.
 
 
-###
+### Distribution of outlet sales per outlet type, and outlet location type
+
+![Hist](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/a54c32f7-254a-4ac1-b4fa-8aab11c8b5bc)
+
+![box1](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/886fa1d7-ab4d-4621-a40c-4a6923b4600e)
+
+![Box 2](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/9b6b0c30-9f0c-4a3c-abe0-c303325d2ae5)
+
+Observations:
+* The mean outlet sales in all stores is ~2181 currency units with a maximum of ~13,000. The standard deviation is high, though, hinting that the outlet sales amounts are spread on a wide range of values.
+* A significant number of sales were recorded from lower-priced items (< 8000 currency units). See the **Distribution of Outlet Sales of Items**.
+* In detail, grocery stores have sales figures concentrated on lower priced items (< 2000 units), while Supermarket Type 3 has sales figures ranging from 0 to ~13,000 units. See the **Distribution of Outlet Sales by Outlet Type**.
+* Supermarkets are outlets of items with higher prices. Specifically, supermarkets located at Tier 3 locations sold high-priced items (> 10,000 units). See the **Distribution of Outlet Sales by Outlet Location Type**.
+
+
+### 
+
+
+
 
 
