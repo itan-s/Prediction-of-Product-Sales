@@ -6,19 +6,19 @@ This project is a sales prediction for food items sold at various stores. The go
 
 ## Exploratory Data Analysis
 
-### Correlation among the numerical features in the dataset
+### Correlation of item outlet sales (target variable) with the numerical features in the dataset
 
 ![Heatmap](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/c431ec22-60bb-4828-a95e-31012d054db5)
 
 Observations:
 * There is a moderate positive correlation between the Item_MRP and Item_Outlet_Sales with a correlation coefficient of 0.57.
 * The positive relationship between the item MRP and outlet sales can be an expected result since a higher MRP may lead to higher outlet sales.
-* Surprisingly, the visibility of the items in stores does not have a significant correlation with the outlet sales.
+* Surprisingly, the visibility of the items in stores does not significantly correlate with the outlet sales.
 
 
-### Distribution of outlet sales per outlet type, and outlet location type
+### Distribution of the item outlet sales
 
-![Hist](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/a54c32f7-254a-4ac1-b4fa-8aab11c8b5bc)
+![hist and boxplot](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/1bf8213f-7de3-4ca1-9a08-b4b3b1eaea11)
 
 ![box1](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/886fa1d7-ab4d-4621-a40c-4a6923b4600e)
 
