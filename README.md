@@ -25,10 +25,11 @@ Observations:
 ![Box 2](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/9b6b0c30-9f0c-4a3c-abe0-c303325d2ae5)
 
 Observations:
-* The mean outlet sales in all stores is ~2181 currency units with a maximum of ~13,000. The standard deviation is high, though, hinting that the outlet sales amounts are spread on a wide range of values.
-* A significant number of sales were recorded from lower-priced items (< 8000 currency units). See the **Distribution of Outlet Sales of Items**.
-* In detail, grocery stores have sales figures concentrated on lower priced items (< 2000 units), while Supermarket Type 3 has sales figures ranging from 0 to ~13,000 units. See the **Distribution of Outlet Sales by Outlet Type**.
-* Supermarkets are outlets of items with higher prices. Specifically, supermarkets located at Tier 3 locations sold high-priced items (> 10,000 units). See the **Distribution of Outlet Sales by Outlet Location Type**.
+* The mean item outlet sales in all stores is ~2181 currency units with a maximum of ~13,000 currency units and high variability.
+* Overall, over 75% of item sales data were within < 5000 currency units across all the store types. See the graph of the Distribution of Item Outlet Sales.
+* In detail, grocery stores have the lowest item sales figures (< 2000 units) with a median of less than 1000 currency units. This may be because groceries are relatively smaller, with probably limited items for sale compared to supermarkets. In contrast, supermarkets have higher item sales figures mostly, ranging from 0 to ~13,000 units. See the graph of the Distribution of Item Outlet Sales by Outlet Type.
+* Meanwhile, the median of outlet item sales data in Supermarket Type 3 is higher than in Type 1 and Type 2. This means that the sales amount per item in Type 3 supermarkets has relatively larger values, though this does not necessarily mean that Type 3 has the highest total sales. Total sales look into the sum of the sales of all items in each store type, which will give more advantage to store types in which a larger variety of items are being sold. See the graph of the Distribution of Item Outlet Sales by Outlet Type.
+* Supermarkets located at Tier 3 locations have the highest item sales (> 10,000 currency units). Nevertheless, the distribution of outlet item sales data is almost similar among different store location tiers. See the Distribution of Item Outlet Sales by Outlet Location Type.
 
 
 ### Average outlet sales per outlet type and outlet location type
@@ -38,8 +39,8 @@ Observations:
 ![bar 2](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/7cc084f1-be6d-48a9-b557-7bbaf900a966)
 
 Observations:
-* Supermarket 3 earned the highest average sales. Grocery stores earned the lowest.
-* Stores in tier 2 and 3 locations have notably higher average sales than those of tier 1 locations.
+* Supermarket Type 3 earned the highest average sales, but Supermarket Type 1 got the highest total item outlet sales. This is because Supermarket Type 1 has more Item_Outlet_Sales records than Type 3. Grocery stores earned the lowest, which may be due to their relatively smaller size and limited stocks of items.
+* Stores in tier 2 and 3 locations have notably higher total and average item outlet sales than those of tier 1 locations, hinting that Tier 1 locations may have fewer customers, low customer patronage, or small purchases per item.
 
 
 ### Number of items sold per item type
