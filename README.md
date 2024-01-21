@@ -52,6 +52,49 @@ Observations:
 * Fruits and vegetables are the abundant items sold in all stores, followed by snack foods and household items.
 * This trend is consistent in all store types: groceries and supermarkets of all types.
 
+## Part 2: Predicting Product Sales
+
+### Model 1: Linear Regression Model
+
+Performance:
+ __________________________________________
+Training Evaluation
+MAE 847.1297153081978,
+ MSE 1297558.0083464545,
+ RMSE: 1139.104037542864,
+ R^2: 0.5615551851775283 
+
+Testing Evaluation
+MAE 804.1189110746128,
+ MSE 1194344.507449666,
+ RMSE: 1092.8606990141361,
+ R^2: 0.5671060748748853 
+
+ Notes:
+ *The linear regression model is ***underfit*** and is not suitable for deployment.
+
+ ### Random Forest Model
+
+ Performance: (Default parameters)
+ __________________________________________
+ Training Evaluation
+MAE 296.2234643388611,
+ MSE 181302.72787729115,
+ RMSE: 425.79658039642726,
+ R^2: 0.9387378133080403 
+
+Testing Evaluation
+MAE 775.404349052088,
+ MSE 1244980.9574609587,
+ RMSE: 1115.7871470226562,
+ R^2: 0.5487527342239559 
+
+ Notes:
+*The random forest regression model has high variance (overfit) and is not suitable for deployment.
+*Moreover, the linear regression model created earlier even has higher R^2 compared to this random forest model.
+*The random forest model needs optimization.
+ 
+
 
 
 
