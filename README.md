@@ -50,49 +50,55 @@ Observations:
 
 Observations:
 * Fruits and vegetables are the abundant items sold in all stores, followed by snack foods and household items.
-* This trend is consistent in all store types: groceries and supermarkets of all types.
+* This trend is consistent in all store types: groceries and supermarkets of all types.   
 
 ## Part 2: Predicting Product Sales
 
 ### Model 1: Linear Regression Model
 
 Performance:
- __________________________________________
-Training Evaluation
-MAE 847.1297153081978,  
-MSE 1297558.0083464545,  
-RMSE: 1139.104037542864,  
-R^2: 0.5615551851775283   
 
-Testing Evaluation  
-MAE 804.1189110746128,  
-MSE 1194344.507449666,  
-RMSE: 1092.8606990141361,  
-R^2: 0.5671060748748853   
+|     | Training Evaluation   | Testing Evaluation  |
+| --- | ------------- | ------------- |
+| MAE | 847.13 | 804.12 |
+| MSE | 1297558.01 | 1194344.51 |
+| RMSE | 1139.10 |  1092.86 |
+| R^2 | 0.56  |  0.56    |
 
  Notes:
  *The linear regression model is ***underfit*** and is not suitable for deployment.
 
- ### Random Forest Model
+    
+ ### Model 2: Random Forest Model
 
- Performance: (Default parameters)
- __________________________________________
-Training Evaluation  
-MAE 296.2234643388611,  
-MSE 181302.72787729115,  
-RMSE: 425.79658039642726,  
-R^2: 0.9387378133080403   
+Performance: (Default parameters)
 
-Testing Evaluation  
-MAE 775.404349052088,  
-MSE 1244980.9574609587,  
-RMSE: 1115.7871470226562,  
-R^2: 0.5487527342239559   
+|     | Training Evaluation   | Testing Evaluation  |
+| --- | ------------- | ------------- |
+| MAE | 296.22 | 775.40 |
+| MSE | 181302.73 | 1244980.96 |
+| RMSE | 425.80 |  1115.79 |
+| R^2 | 0.94  |  0.55    |
 
- Notes:
+Notes:
 *The random forest regression model has high variance (overfit) and is unsuitable for deployment.
 *Moreover, the linear regression model created earlier even has higher R^2 than this random forest model.
 *The random forest model needs optimization.
+   
+Performance: (Tuned Parameters)
+
+|     | Training Evaluation   | Testing Evaluation  |
+| --- | ------------- | ------------- |
+| MAE | 662.28 | 734.70 |
+| MSE | 893390.80 | 1112700.45 |
+| RMSE | 945.19 |  1054.85 |
+| R^2 | 0.70  |  0.60   |
+
+Notes:
+- The new random forest model with tuned parameters shows lower variance than the one with the default parameters. 
+- However, the model is still underfit. 
+- One of the possible solutions is to add more entries to the dataset by updating the dataset with fresh entries. Another is by selecting a new model.
+
  
 
 
