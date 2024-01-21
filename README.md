@@ -65,8 +65,8 @@ Performance:
 | RMSE | 1139.10 |  1092.86 |
 | R^2 | 0.56  |  0.56    |
 
- Notes:
- *The linear regression model is ***underfit*** and is not suitable for deployment.
+ Note:
+ - The linear regression model is ***underfit*** and is not suitable for deployment.
 
     
  ### Model 2: Random Forest Model
@@ -81,10 +81,12 @@ Performance: (Default parameters)
 | R^2 | 0.94  |  0.55    |
 
 Notes:
-*The random forest regression model has high variance (overfit) and is unsuitable for deployment.
-*Moreover, the linear regression model created earlier even has higher R^2 than this random forest model.
-*The random forest model needs optimization.
-   
+- The random forest regression model has high variance (overfit) and is unsuitable for deployment.
+- Moreover, the linear regression model created earlier even has higher R^2 than this random forest model.
+- The random forest model needs optimization.
+
+### Model 3: Tuned Random Forest Model
+ 
 Performance: (Tuned Parameters)
 
 |     | Training Evaluation   | Testing Evaluation  |
@@ -95,9 +97,18 @@ Performance: (Tuned Parameters)
 | R^2 | 0.70  |  0.60   |
 
 Notes:
-- The new random forest model with tuned parameters shows lower variance than the one with the default parameters. 
+- The new random forest model with tuned parameters improved and showed lower variance than the one with the default parameters.
 - However, the model is still underfit. 
 - One of the possible solutions is to add more entries to the dataset by updating the dataset with fresh entries. Another is by selecting a new model.
+
+### ***Choosing the best model for prediction***
+
+- In choosing the best model, one may refer to the metrics R^2, MAE, MSE, and RMSE.
+- R^2 describes how well the model predicts the target variable (Item_Outlet_Sales). Hence, a higher R^2 is thought to be better. This, however, does not totally claim any cause-effect relationship between correlated variables.
+- Looking at the R^2 of the testing data of all the models featured above, the tuned random forest model is slightly better with ~0.60. 
+- The R^2 of this model is still low, though, suggesting that a better model, other than the 3 that were used here, may be employed.
+- The RMSE may also be checked as it gives more penalty on large errors. The RMSE of the testing data of the tuned random forest model prevailed among the 3 featured models above.
+- Hence, given these 3 models above, the best one to deploy is the ***Tuned Random Forest Model***. But then, a better model, other than the 3 used here, can be employed to increase the reliability of the predicted results.
 
  
 
