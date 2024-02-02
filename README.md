@@ -64,9 +64,21 @@ Performance:
 | MSE | 1297558.01 | 1194344.51 |
 | RMSE | 1139.10 |  1092.86 |
 | R^2 | 0.56  |  0.56    |
+---
+*** Interpreting the regression coefficients ***
+- The generated coefficients of the Linear Regression model were visualized below. The larger the coefficient, the greater its influence is on the value of the target variable. 
 
- Note:
- - The linear regression model is ***underfit*** and is not suitable for deployment.
+![lr](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/73a62aaa-431d-4f68-a812-af3155896ccb)
+
+Interpretation of Coefficients:
+- As the data suggests, the following can be interpreted:
+- The feature with the largest impact on the target ('Item_Outlet_Sales') is 'nominal_Outlet_Type_Supermarket Type 3'. This means that when the outlet type is Supermarket Type 3, the item outlet sales may go up by around 2000 currency units.
+- It also seems that 'item_Visibility' does not help as one unit higher visibility may cause the 'Item_Outlet_Sales' to go down by ~423 currency units.
+- Another notable feature is the 'Outlet_Size'. A one-step upgrade of the outlet size, e.g. from Medium to Large, may increase the sales by ~172 currency units.
+---
+ Notes on the model:
+ - The linear regression model is underfitting the dataset and is not applicable for deployment. This is evident with the low R^2 of the model with the data.
+ - Consider using a different model.
 
     
  ### Model 2: Random Forest Model
@@ -79,8 +91,19 @@ Performance: (Default parameters)
 | MSE | 181302.73 | 1244980.96 |
 | RMSE | 425.80 |  1115.79 |
 | R^2 | 0.94  |  0.55    |
+---
+*** Interpreting the feature importances ***
+- The higher the feature importance, the more useful the feature is to the model in predicting the target variable.
 
-Notes:
+![rf](https://github.com/itan-s/Prediction-of-Product-Sales/assets/151743020/a8a30828-ae83-4b9f-9ba2-ff0b389c4746)
+
+Interpretation of Importances:
+- As the data suggests, the following can be interpreted:
+- The feature 'Item_MRP' is the most utilized feature of the model, thus is the most important. This may be expected since earlier Exloratory Data Analysis (EDA) shows that this feature is somewhat correlated to the target ('Item_Outlet_Sales').
+- 'Supermarket Type 3' and 'Supermarket Type 1' also made it into the list, which may imply that specific types of supermarkets are significant contributors as decision factors of the model.
+- It can be noted that Supermarket Type 3', 'Item_Visibility', and 'Supermarket Type 1' are features that also appear in the previously discussed linear regression model that have considerable coefficient values, and thus affects the target variable considerably in the said model.
+---
+Notes on the model:
 - The random forest regression model has high variance (overfit) and is unsuitable for deployment.
 - Moreover, the linear regression model created earlier even has higher R^2 than this random forest model.
 - The random forest model needs optimization.
@@ -96,7 +119,7 @@ Performance: (Tuned Parameters)
 | RMSE | 945.19 |  1054.85 |
 | R^2 | 0.70  |  0.60   |
 
-Notes:
+Notes on the model:
 - The new random forest model with tuned parameters improved and showed lower variance than the one with the default parameters.
 - However, the model is still underfit. 
 - One of the possible solutions is to add more entries to the dataset by updating the dataset with fresh entries. Another is by selecting a new model.
